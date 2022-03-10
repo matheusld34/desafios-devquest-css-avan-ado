@@ -1,0 +1,56 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "images images images images";
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.6rem;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+.images {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+}
+
+.images h2 {
+    font-weight: 700;
+    font-size: 3rem;
+    position: absolute;
+    padding: 10px 0 40px 10px;
+    bottom: 0;
+}
+
+.images p {
+    font-weight: 300;
+    font-size: 1.7rem;
+    position: absolute;
+    padding: 10px 0 20px 10px;
+    bottom: 0;
+}
+
+.images img {
+    height: 300px;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+@media(max-width: 768px) {
+    .images {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media(max-width: 425px) {
+    .images {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
